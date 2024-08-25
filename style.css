@@ -84,19 +84,21 @@ main {
     padding-left: var(--content-paddingleft);
 }
 
-.form {
-    padding: 0px 150px;
-    padding-left: var(--content-paddingleft);
-    background-color: white;
-    box-shadow: 0px 5px 8px 3px #E2E2E2;
-}
-
-.form form {
+.inputs {
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0px 5px 8px 3px #E2E2E2;
+    padding: 10px 150px;
+    padding-left: var(--content-paddingleft);
 }
 
-form .item {
+.form-heading {
+    width: 100%;
+    padding: 10px 0px 25px 0px;
+}
+
+form section .item {
     font-family: Roboto, var(--backup-font);
     font-weight: 400;
     letter-spacing: 1.3px;
@@ -113,6 +115,14 @@ form .item {
     height: 30px;
     border-radius: 3px;
     border: 0.1px solid rgba(61, 61, 61, 0.3)
+}
+
+input[type="password"]:invalid {
+    border-color: red;
+}
+
+input:focus {
+    border-color: blue;
 }
 
 .button {
